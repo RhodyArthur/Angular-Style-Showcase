@@ -1,0 +1,28 @@
+@import "./mixins";
+
+// colors
+$green: #01796f;
+$green-50: #33aba1;
+$green-100: #00655b;
+$yellow-50: #ffffcc;
+$yellow-100: #f3e885;
+$yellow-200: #d4b44c;
+$white-50: whitesmoke;
+$dark: #2b283a;
+$red: #ef5839;
+
+
+//  fonts
+$font: 'Roboto', sans-serif;
+
+// font-sizes
+$font-size-xxl: pxToRem(28px);
+$font-size-xl: pxToRem(24px);
+$font-size-lg: pxToRem(22px);
+$font-size-md: pxToRem(18px);
+$font-size-sm: pxToRem(16px);
+
+
+// line height
+$line-height: 1.5rem;
+
