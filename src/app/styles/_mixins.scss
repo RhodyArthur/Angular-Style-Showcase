@@ -2,7 +2,7 @@
 @import './variables';
 
 
-
+// color theme
 @mixin theme-colors($light-theme: true) {
     @if($light-theme) {
         background-color: $green;
@@ -12,12 +12,19 @@
     }
 }
 
+// flex container
 @mixin flex-container($display, $direction, $position) {
     display: $display;
     justify-content: $direction;
     align-items: $position;
 }
 
+
+// image
+@mixin image() {
+    display: block;
+    width: 100%;
+}
 
 // converts rem to px
 @function pxToRem($value, $base:16) {
