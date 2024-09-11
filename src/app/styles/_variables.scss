@@ -1,4 +1,4 @@
-// @import "./mixins";
+@use 'sass:math';
 
 // colors
 $green: #01796f;
@@ -33,3 +33,13 @@ $padding-1: pxToRem(20);
 $padding-2: pxToRem(13.6);
 $padding-3: pxToRem(46);
 
+// converts rem to px
+@function pxToRem($value, $base:16) {
+    @return  math.div($value, $base)+rem
+};
+
+// image
+img {
+    display: block;
+    width: 100%;
+}

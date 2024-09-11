@@ -4,15 +4,14 @@
 .main-container {
     @include flex-container(flex, space-between, center);
     flex-direction: column;
-    padding: 1.25rem 0;
+    padding: $padding-1;
 }
 
 // media query
 @media screen and (min-width: 768px) {
 
     .main-container {
-        flex-direction: row;
-        padding: $padding-3;
+        padding: $padding-3 0;
         max-width: 800px;
         width: 90%;
         margin: 0 auto;
