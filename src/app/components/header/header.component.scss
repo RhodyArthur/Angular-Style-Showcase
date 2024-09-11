@@ -1,0 +1,78 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.container {
+    background-color: $green;
+    padding: $padding-1;
+    text-align: center;
+
+    // Typography
+    h1 {
+        color: $white-50;
+        font-size: $font-size-xxl;
+
+
+        span {
+            display: block;
+            font-size: $font-size-sm;
+            color: $yellow-100;
+        }
+
+    }
+
+
+    // layout
+    nav {
+        margin-top: pxToRem(24);
+        border-top: 1px dotted $yellow-100;
+        border-bottom: 1px dotted $yellow-100;
+        @include flex-container(flex, space-around, center);
+
+        ul {
+            list-style-type: none;
+            @include flex-container(flex, space-around, center);
+            gap: 2rem;
+            
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-size: $font-size-md;
+                        padding: 0.5rem 0;
+                        display: block;
+
+                        &:hover,
+                        &:active {
+                            color: $yellow-200;
+                        }
+                    }
+        }
+    }
+
+
+}
+@media screen and (min-width: 768px) {
+    .container {
+        @include flex-container(flex, space-between, center);
+        padding: $padding-3;
+
+        h1 {
+            font-size: $font-size-xxxl;
+
+            span {
+                font-size: $font-size-xl;
+            }
+        }
+
+
+        nav {
+            border: none;
+
+            svg {
+                margin-left: $font-size-sm;
+            }
+
+        }
+    }
+
+}
+

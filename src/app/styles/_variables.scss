@@ -1,4 +1,4 @@
-@import "./mixins";
+// @import "./mixins";
 
 // colors
 $green: #01796f;
@@ -16,13 +16,20 @@ $red: #ef5839;
 $font: 'Roboto', sans-serif;
 
 // font-sizes
-$font-size-xxl: pxToRem(28px);
-$font-size-xl: pxToRem(24px);
-$font-size-lg: pxToRem(22px);
-$font-size-md: pxToRem(18px);
-$font-size-sm: pxToRem(16px);
+$font-size-xxxl: pxToRem(36);
+$font-size-xxl: pxToRem(28);
+$font-size-xl: pxToRem(24);
+$font-size-lg: pxToRem(22);
+$font-size-md: pxToRem(18);
+$font-size-sm: pxToRem(16);
 
 
 // line height
-$line-height: 1.5rem;
+$line-height: 1.5;
+
+
+// padding
+$padding-1: pxToRem(20);
+$padding-2: pxToRem(13.6);
+$padding-3: pxToRem(46);
 

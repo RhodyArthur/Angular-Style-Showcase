@@ -1,4 +1,25 @@
+@use 'sass:math';
+@import './variables';
+
+
+
+@mixin theme-colors($light-theme: true) {
+    @if($light-theme) {
+        background-color: $green;
+    }
+    @else {
+        background-color: $yellow-50;
+    }
+}
+
+@mixin flex-container($display, $direction, $position) {
+    display: $display;
+    justify-content: $direction;
+    align-items: $position;
+}
+
+
 // converts rem to px
-@function pxToRem($value) {
-    @return $value / 16
+@function pxToRem($value, $base:16) {
+    @return  math.div($value, $base)+rem
 }
