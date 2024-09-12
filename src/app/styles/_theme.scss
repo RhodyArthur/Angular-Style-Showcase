@@ -1,0 +1,22 @@
+@import './variables';
+
+$light-mode: (
+    "body-bg": white,
+    "header-bg": $green,
+    "footer-bg": $yellow-100,
+    "footer-clr": $green,
+    "text-clr": $dark,
+);
+
+
+$dark-mode: (
+    "body-bg": $blue-black,
+    "header-bg": $blue-black-50,
+    "footer-bg": $blue-black-50,
+    "footer-clr": $purple,
+    "text-clr": $white-50,
+);
+
+@function theme-value($key, $theme: $light-mode) {
+    @return map-get(map-get($theme, $key), $key);
+}

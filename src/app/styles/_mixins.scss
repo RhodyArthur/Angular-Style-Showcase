@@ -1,33 +1,16 @@
 @import './variables';
 
-
-$light-mode: (
-    "body-bg": white,
-    "header-bg": $green,
-    "footer-bg": $yellow-100,
-    "footer-clr": $green,
-    "text-clr": $dark,
-);
-
-
-$dark-mode: (
-    "body-bg": $blue-black,
-    "header-bg": $blue-black-50,
-    "footer-bg": $blue-black-50,
-    "footer-clr": $purple,
-    "text-clr": $white-50,
-);
-
-
-
 // color theme
-@mixin theme-colors($light-theme: true) {
-    @if($light-theme) {
-        background-color: $green;
-    }
-    @else {
-        background-color: $yellow-50;
-    }
+// @mixin theme-colors($light-theme: true) {
+//     @if($light-theme) {
+//         background-color: white;
+//     }
+//     @else {
+//         background-color: $yellow-50;
+//     }
+// }
+@mixin theme($key, $property) {
+    #{$property}: var(--#{$key});
 }
 
 // flex container
