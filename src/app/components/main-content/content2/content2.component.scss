@@ -13,13 +13,7 @@
 
         .btn {
             @include button-styles;
-            
-            &:hover,
-            &:active {
-                color: $yellow-100;
-                background-color: $green-100;
-            }
-    
+           
         }
     
         .btn-dark {

@@ -5,23 +5,19 @@ import { Directive, ElementRef, HostListener, Input, Renderer2 } from '@angular/
   standalone: true
 })
 export class CustomStyleDirective {
-  @Input('appCustomStyle') customColor: string = 'red'; // Input property to accept custom color
+  private hoverColor: string = '#f3e885';
+  private hoverBackgroundColor: string = '#00655b';
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {
-    // Initial style application if needed
-    this.setBackgroundColor(this.customColor);
-  }
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.setBackgroundColor('lightblue'); // Change background color on hover
+    this.renderer.setStyle(this.el.nativeElement, 'color', this.hoverColor);
+    this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', this.hoverBackgroundColor);
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.setBackgroundColor(this.customColor); // Revert to original color
-  }
-
-  private setBackgroundColor(color: string) {
-    this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', color);
+    this.renderer.removeStyle(this.el.nativeElement, 'color');
+    this.renderer.removeStyle(this.el.nativeElement, 'backgroundColor');
   }
 
 }
