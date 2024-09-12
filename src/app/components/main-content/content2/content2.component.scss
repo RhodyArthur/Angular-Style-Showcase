@@ -1,0 +1,74 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.container {
+    @include flex-container(flex, space-between, center);
+    flex-direction: column;
+    gap: 1rem;
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .btn {
+            @include button-styles;
+            
+            &:hover,
+            &:active {
+                color: $yellow-100;
+                background-color: $green-100;
+            }
+    
+        }
+    
+        .btn-dark {
+            color: $white-50;
+            background-color: $green;
+        }
+    
+        .btn-mid {
+            color: $white-50;
+            background: $green-50;
+        }
+          
+        .btn-light {
+            color: $green-100;
+            background: $yellow-100;
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+
+        .section-two-image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+
+            .feature-item {
+                flex: 1 260px;
+
+
+                .feature-image {
+                    width: 100%;
+                    border-radius: 4.6px;
+                }
+            }
+
+            
+              
+        }
+
+        .inner {
+            display: flex;
+            flex-direction: row;
+            .btn {
+                display: inline-block;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
