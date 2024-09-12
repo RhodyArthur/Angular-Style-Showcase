@@ -10,7 +10,8 @@
 }
 
 body {
-    @include theme-colors(false);
+    // @include theme-colors(false);
     font-family: $font;
     color: $dark;
+    background-color: $yellow-50;
 }
